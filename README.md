@@ -86,9 +86,9 @@ All data originates from **NASA’s open-access bioscience publications**.
             <p><strong>Skills:</strong> Leadership, Writing, Coordination</p>
         </td>
         <td>
-            <img src="https://github.com/user-attachments/assets/9ebc7d0a-426d-4db9-833a-c6f420e9fcd8" SALMAN DERDEB width="200" height="250" style="border-radius: 50%;">
-            <h3><a target="_blank" href="https://www.instagram.com/reality_faker/" >SALMAN DERDEB</a> </h3>
-            <h3>📚 Science Student</h3>
+            <img src="https://github.com/user-attachments/assets/9ebc7d0a-426d-4db9-833a-c6f420e9fcd8" SALMANE DERDEB width="200" height="250" style="border-radius: 50%;">
+            <h3><a target="_blank" href="https://www.instagram.com/reality_faker/" >SALMANE DERDEB</a> </h3>
+            <h3>📚 Science Mathematics Student</h3>
             <p><strong>Role:</strong> Video Editor</p>
             <p><strong>Skills:</strong> Robotics, 3D Design, Programming</p>
         </td>
