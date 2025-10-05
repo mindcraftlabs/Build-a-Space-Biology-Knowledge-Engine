@@ -73,6 +73,7 @@ The front-end dashboard provides **interactivity and clarity**:
 All data originates from **NASA’s open-access bioscience publications**.
 "[NASA Data](https://github.com/jgalazka/SB_publications/tree/main)"
 
+---
 
 ## 👥 Team Members
 <table style="width: 100%; text-align: center;">
