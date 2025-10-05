@@ -71,4 +71,4 @@ The front-end dashboard provides **interactivity and clarity**:
 
 ## 📂 NASA Data
 All data originates from **NASA’s open-access bioscience publications**.
-"[https://www.nasa.gov" target="_blank](https://github.com/jgalazka/SB_publications/tree/main)"
+"[NASA Data](https://github.com/jgalazka/SB_publications/tree/main)"
