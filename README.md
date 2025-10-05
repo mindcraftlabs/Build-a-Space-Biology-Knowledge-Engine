@@ -73,46 +73,52 @@ The front-end dashboard provides **interactivity and clarity**:
 All data originates from **NASA’s open-access bioscience publications**.
 "[NASA Data](https://github.com/jgalazka/SB_publications/tree/main)"
 
-## 👥 Team Members
 
-<h1>👥 Team Members</h1>
+## 👥 Team Members
 <table style="width: 100%; text-align: center;">
     <tr>
         <td>
-            <img src="https://github.com/user-attachments/assets/14d46eb5-9860-41b3-89f0-d974c6bd188a"Taha Taidi Laamiri width="200" height="250" style="border-radius: 50%;">
-             <h3><a href="https://github.com/DexterTaha" target="_blank">Taha TAIDI LAAMIRI</a> 🏆</h3>
+            <img src="https://github.com/user-attachments/assets/14d46eb5-9860-41b3-89f0-d974c6bd188a" TAHA TAIDI LAAMIRI width="200" height="250" style="border-radius: 50%;">
+             <h3><a href="https://github.com/DexterTaha" target="_blank">TAHA TAIDI LAAMIRI</a> </h3>
             <h3>📚 Industrial Engineering</h3>
             <p><strong>Role:</strong> Team Owner & Backend Developer</p>
             <p><strong>Skills:</strong> Leadership, Writing, Coordination</p>
         </td>
         <td>
-            <img src="https://github.com/user-attachments/assets/6fe04c47-3c90-492c-bd40-a7436ff193d1"Salman Derdab width="200" height="250" style="border-radius: 50%;">
-            <h3><a target="_blank" href="https://www.instagram.com/reality_faker/" >Soufaine GHAZOUANE</a> 🎨</h3>
-            <h3>🎨 3D Artist</h3>
-            <p><strong>Role:</strong> 3D Designer</p>
-            <p><strong>Skills:</strong> 3D Modeling, 3D Animation, VFX</p>
+            <img src="https://github.com/user-attachments/assets/9ebc7d0a-426d-4db9-833a-c6f420e9fcd8" SALMAN DERDEB width="200" height="250" style="border-radius: 50%;">
+            <h3><a target="_blank" href="https://www.instagram.com/reality_faker/" >SALMAN DERDEB</a> </h3>
+            <h3>📚 Science Student</h3>
+            <p><strong>Role:</strong> Video Editor</p>
+            <p><strong>Skills:</strong> Robotics, 3D Design, Programming</p>
         </td>
                     <td>
-            <img src="https://github.com/user-attachments/assets/c4e0f643-df81-4683-a413-2296e6527f47" alt="Walid Ben Slimane" width="250" height="250" style="border-radius: 50%;">
-            <h3><a href="https://github.com/walidbnslimane" target="_blank">Walid Ben Slimane</a> 🔧</h3>
-            <h3>🔧 Tech Student</h3>
-            <p><strong>Role:</strong> Web Development</p>
+            <img src="https://github.com/user-attachments/assets/b25c348b-d36f-4dd7-af4a-eb81c705d57c" MED YASSINE BEHAMMOU width="200" height="250" style="border-radius: 50%;">
+            <h3><a href="https://github.com/walidbnslimane" target="_blank">MED YASSINE BEHAMMOU</a> </h3>
+            <h3>📚 Science Student</h3>
+            <p><strong>Role:</strong>  Backend Developer & Data Analyst</p>
             <p><strong>Skills:</strong> Robotics, Programming, 3D Design</p>
         </td>
     </tr>
     <tr>
         <td>
-            <img src="https://github.com/user-attachments/assets/70c6ed95-7fce-4ee0-840e-6f5b5265e15e" alt="Salmane Derdeb" width="250" height="250" style="border-radius: 50%;">
-            <h3><a href="https://github.com/salmane-derdeb" target="_blank">Salmane Derdeb</a> 🎨</h3>
+            <img src="https://github.com/user-attachments/assets/2c713ccb-ab21-4fd5-8392-8a7c9552a62e" MOURTADA TAIDI LAAMIRI width="200" height="250" style="border-radius: 50%;">
+            <h3><a href="https://github.com/salmane-derdeb" target="_blank">MOURTADA TAIDI LAAMIRI</a> </h3>
             <h3>📚 Science Student</h3>
             <p><strong>Role:</strong> Graphic Designer</p>
             <p><strong>Skills:</strong> Design, Programming, Robotics</p>
         </td>
         <td>
-            <img src="https://github.com/user-attachments/assets/5c9d1a28-243c-4c6f-8052-82998c2a2ced" alt="Mourtada TAIDI LAAMIRI" width="250" height="250" style="border-radius: 50%;">
-            <h3><a href="https://github.com/taidimortada" target="_blank">Mourtada TAIDI LAAMIRI</a> 📑</h3>
+            <img src="https://github.com/user-attachments/assets/bf4b8673-004b-45db-bee4-a3f43f788413" RANIA ELHADDAOUI width="200" height="250" style="border-radius: 50%;">
+            <h3><a href="https://github.com/taidimortada" target="_blank">RANIA ELHADDAOUI</a> </h3>
             <h3>📚 Science Student</h3>
-            <p><strong>Role:</strong> Documentation</p>
+            <p><strong>Role:</strong> Documenter</p>
+            <p><strong>Skills:</strong> Robotics, Programming, 3D Design</p>
+        </td>
+        <td>
+            <img src="https://github.com/user-attachments/assets/4e8eeabd-78cd-4cc3-8c56-d02175d7cf89" SALAMA HAMRAOUI width="200" height="250" style="border-radius: 50%;">
+            <h3><a href="https://github.com/taidimortada" target="_blank">SALAMA HAMRAOUI</a> </h3>
+            <h3>📚 Science Student</h3>
+            <p><strong>Role:</strong> Documenter</p>
             <p><strong>Skills:</strong> Robotics, Programming, 3D Design</p>
         </td>
     </tr>
