@@ -72,3 +72,48 @@ The front-end dashboard provides **interactivity and clarity**:
 ## 📂 NASA Data
 All data originates from **NASA’s open-access bioscience publications**.
 "[NASA Data](https://github.com/jgalazka/SB_publications/tree/main)"
+
+## 👥 Team Members
+
+<h1>👥 Team Members</h1>
+<table style="width: 100%; text-align: center;">
+    <tr>
+        <td>
+            <img src="https://github.com/user-attachments/assets/12a3426f-ae99-45b6-90b2-05169ba14a44" alt="Taha Taidi Laamiri" width="250" height="250" style="border-radius: 50%;">
+             <h3><a href="https://github.com/DexterTaha" target="_blank">Taha TAIDI LAAMIRI</a> 🏆</h3>
+            <h3>📚 Industrial Engineering</h3>
+            <p><strong>Role:</strong> Team Leader & Documentation</p>
+            <p><strong>Skills:</strong> Leadership, Writing, Coordination</p>
+        </td>
+        <td>
+            <img src="https://github.com/user-attachments/assets/6fe04c47-3c90-492c-bd40-a7436ff193d1" alt="Soufaine GHAZOUANE" width="250" height="250" style="border-radius: 50%;">
+            <h3><a target="_blank" href="https://www.instagram.com/reality_faker/" >Soufaine GHAZOUANE</a> 🎨</h3>
+            <h3>🎨 3D Artist</h3>
+            <p><strong>Role:</strong> 3D Designer</p>
+            <p><strong>Skills:</strong> 3D Modeling, 3D Animation, VFX</p>
+        </td>
+                    <td>
+            <img src="https://github.com/user-attachments/assets/c4e0f643-df81-4683-a413-2296e6527f47" alt="Walid Ben Slimane" width="250" height="250" style="border-radius: 50%;">
+            <h3><a href="https://github.com/walidbnslimane" target="_blank">Walid Ben Slimane</a> 🔧</h3>
+            <h3>🔧 Tech Student</h3>
+            <p><strong>Role:</strong> Web Development</p>
+            <p><strong>Skills:</strong> Robotics, Programming, 3D Design</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://github.com/user-attachments/assets/70c6ed95-7fce-4ee0-840e-6f5b5265e15e" alt="Salmane Derdeb" width="250" height="250" style="border-radius: 50%;">
+            <h3><a href="https://github.com/salmane-derdeb" target="_blank">Salmane Derdeb</a> 🎨</h3>
+            <h3>📚 Science Student</h3>
+            <p><strong>Role:</strong> Graphic Designer</p>
+            <p><strong>Skills:</strong> Design, Programming, Robotics</p>
+        </td>
+        <td>
+            <img src="https://github.com/user-attachments/assets/5c9d1a28-243c-4c6f-8052-82998c2a2ced" alt="Mourtada TAIDI LAAMIRI" width="250" height="250" style="border-radius: 50%;">
+            <h3><a href="https://github.com/taidimortada" target="_blank">Mourtada TAIDI LAAMIRI</a> 📑</h3>
+            <h3>📚 Science Student</h3>
+            <p><strong>Role:</strong> Documentation</p>
+            <p><strong>Skills:</strong> Robotics, Programming, 3D Design</p>
+        </td>
+    </tr>
+</table>
