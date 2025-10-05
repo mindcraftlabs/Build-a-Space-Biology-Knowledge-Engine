@@ -79,7 +79,7 @@ All data originates from **NASA’s open-access bioscience publications**.
 <table style="width: 100%; text-align: center;">
     <tr>
         <td>
-            <img src=![Image](https://github.com/user-attachments/assets/14d46eb5-9860-41b3-89f0-d974c6bd188a)="Taha Taidi Laamiri" width="250" height="250" style="border-radius: 50%;">
+            <img src=(https://github.com/user-attachments/assets/14d46eb5-9860-41b3-89f0-d974c6bd188a)="Taha Taidi Laamiri" width="250" height="250" style="border-radius: 50%;">
              <h3><a href="https://github.com/DexterTaha" target="_blank">Taha TAIDI LAAMIRI</a> 🏆</h3>
             <h3>📚 Industrial Engineering</h3>
             <p><strong>Role:</strong> Team Leader & Documentation</p>
