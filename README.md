@@ -79,14 +79,14 @@ All data originates from **NASA’s open-access bioscience publications**.
 <table style="width: 100%; text-align: center;">
     <tr>
         <td>
-            <img src="https://github.com/user-attachments/assets/14d46eb5-9860-41b3-89f0-d974c6bd188a"Taha Taidi Laamiri" 
+            <img src="https://github.com/user-attachments/assets/14d46eb5-9860-41b3-89f0-d974c6bd188a"Taha Taidi Laamiri width="200" height="250" style="border-radius: 50%;">
              <h3><a href="https://github.com/DexterTaha" target="_blank">Taha TAIDI LAAMIRI</a> 🏆</h3>
             <h3>📚 Industrial Engineering</h3>
-            <p><strong>Role:</strong> Team Leader & Documentation</p>
+            <p><strong>Role:</strong> Team Owner & Backend Developer</p>
             <p><strong>Skills:</strong> Leadership, Writing, Coordination</p>
         </td>
         <td>
-            <img src="https://github.com/user-attachments/assets/6fe04c47-3c90-492c-bd40-a7436ff193d1" alt="Soufaine GHAZOUANE" width="250" height="250" style="border-radius: 50%;">
+            <img src="https://github.com/user-attachments/assets/6fe04c47-3c90-492c-bd40-a7436ff193d1"Salman Derdab width="200" height="250" style="border-radius: 50%;">
             <h3><a target="_blank" href="https://www.instagram.com/reality_faker/" >Soufaine GHAZOUANE</a> 🎨</h3>
             <h3>🎨 3D Artist</h3>
             <p><strong>Role:</strong> 3D Designer</p>
