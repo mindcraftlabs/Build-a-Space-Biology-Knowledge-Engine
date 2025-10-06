@@ -1,4 +1,4 @@
-# Project README
+# BEXRP
 
 ## Table of contents
 
