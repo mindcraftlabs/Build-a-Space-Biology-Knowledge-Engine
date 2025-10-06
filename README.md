@@ -1,5 +1,15 @@
 # Project MINDCRAFT Alpha
+<div align="center">
 
+# 🌍 **Visit Our Website**
+
+## 🔗 [https://bexrp.mindcraftdev.com/](https://bexrp.mindcraftdev.com/)
+
+<a href="https://bexrp.mindcraftdev.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Visit-BEXRP%20Portal-brightgreen?style=for-the-badge&logo=google-chrome" alt="Visit BEXRP Portal">
+</a>
+
+</div>
 ## 📌 Summary
 Our project aims to make decades of **NASA bioscience research** accessible, summarized, and interconnected through a dynamic **AI-powered knowledge platform**.  
 
