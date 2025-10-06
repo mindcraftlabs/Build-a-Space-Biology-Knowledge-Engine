@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — BEXRP</title>
+    <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}" />
+    <!-- Load fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/imlazy.css') }}">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="hero" role="banner">
+            <div class="logo" aria-hidden="true">BEX</div>
+            <div>
+                <h1>About our solution</h1>
+                <p class="muted">Biology Experiment Research Portal — context, goals and the team behind the project.
+                </p>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main id="main">
+            <div class="grid">
+
+                <!-- Solution section -->
+                <section class="card solution" aria-labelledby="context-title">
+                    <h2 id="context-title">
+                        2025 NASA Space Apps Challenge — Build a Space Biology Knowledge Engine
+                    </h2>
+
+                    <div class="hero-banner" aria-hidden="true">
+                        <img src="{{ url_for('static', filename='images/banners/space-apps-2025.jpg') }}"
+                            alt="NASA Space Apps Challenge 2025 banner" onerror="this.style.display='none'" />
+                    </div>
+
+                    <p class="muted">Event: 2025 NASA Space Apps Challenge</p>
+
+                    <!-- Accordions -->
+                    <div class="accordion">
+                        <!-- Summary -->
+                        <button class="accordion-button" aria-expanded="false" aria-controls="panel-summary"
+                            id="btn-summary">
+                            Summary <span aria-hidden="true">▸</span>
+                        </button>
+                        <div id="panel-summary" class="accordion-panel" role="region" aria-labelledby="btn-summary">
+                            <p class="muted">Enable a new era of human space exploration — click to expand for details.
+                            </p>
+                            <p>
+                                NASA has performed biology experiments in space for decades, generating a large amount
+                                of data.
+                                Your challenge is to build a dynamic dashboard that leverages AI, knowledge graphs,
+                                and/or other tools
+                                to summarize NASA bioscience publications and enable exploration of experimental
+                                results.
+                            </p>
+                        </div>
+
+                        <!-- Background -->
+                        <button class="accordion-button" aria-expanded="false" aria-controls="panel-background"
+                            id="btn-background">
+                            Background <span aria-hidden="true">▸</span>
+                        </button>
+                        <div id="panel-background" class="accordion-panel" role="region"
+                            aria-labelledby="btn-background">
+                            <p class="muted">Why the challenge matters — click to expand for background.</p>
+                            <p>
+                                Exploring the Moon and Mars safely requires understanding how living systems respond to
+                                space.
+                                NASA's research provides valuable insights, but this data can be hard to navigate. AI
+                                and informatics
+                                approaches can organize and summarize this knowledge effectively.
+                            </p>
+                        </div>
+
+                        <!-- Objectives -->
+                        <button class="accordion-button" aria-expanded="false" aria-controls="panel-objectives"
+                            id="btn-objectives">
+                            Objectives <span aria-hidden="true">▸</span>
+                        </button>
+                        <div id="panel-objectives" class="accordion-panel" role="region"
+                            aria-labelledby="btn-objectives">
+                            <p class="muted">Primary goals — click to expand for objectives.</p>
+                            <ul>
+                                <li>Dynamic dashboard with interactive search features</li>
+                                <li>AI-assisted summaries, keyword extraction, author discovery</li>
+                                <li>Interactive knowledge graph to reveal progress and gaps</li>
+                                <li>Downloadable metadata for analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical solution -->
+                    <div class="accordion">
+                        <button class="accordion-button" aria-expanded="false" aria-controls="panel-tech" id="btn-tech">
+                            Technical solution <span aria-hidden="true">▸</span>
+                        </button>
+                        <div id="panel-tech" class="accordion-panel" role="region" aria-labelledby="btn-tech">
+                            <p>
+                                Lightweight Flask app with Python backend for data ingestion, SQLite database, and
+                                frontend JavaScript modules
+                                for charts and knowledge graph visualization.
+                            </p>
+                            <p class="muted">
+                                Key points: server-side article indexing and AI-friendly metadata extraction (via
+                                <code>pmc_toolkit.py</code>),
+                                API served by <code>app.py</code>, client-side charts and
+                                <code>knowledgegraph.js</code>.
+                            </p>
+
+                            <div class="project-tree-wrapper">
+                                <button class="copy-tree" id="copyTreeBtn">Copy project tree</button>
+                                <div class="project-tree-label">Project structure</div>
+                                <pre class="project-tree">
+                                    ├── app.py
+                                    ├── assts
+                                    │ └── smileos.png
+                                    ├── pmc_articles_csv_metadata.db
+                                    ├── pmc_toolkit.py
+                                    ├── pyproject.toml
+                                    ├── README.md
+                                    ├── requirements.txt
+                                    ├── static
+                                    │ ├── css
+                                    │ │ ├── galaxy.gif
+                                    │ │ └── style.css
+                                    │ ├── icons
+                                    │ │ └── favicon.ico
+                                    │ └── js
+                                    │ ├── charts.js
+                                    │ ├── index.js
+                                    │ └── knowledgegraph.js
+                                    ├── templates
+                                    │ ├── 404.html
+                                    │ ├── charts.html
+                                    │ ├── index.html
+                                    │ └── knowledge.html
+                                    └── uv.lock
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team portraits instructions -->
+                    <p style="margin-top: 8px; color: var(--muted); font-size: 0.9rem">
+                        To update portraits, place images in <code>static/images/team/</code> with these filenames:
+                        <code>salma.jpg, taha.jpg, salman.jpg, rania.jpg, mourtada.jpg, medyassine.jpg</code>
+                    </p>
+
+                    <!-- Team grid -->
+                    <div class="team-grid" role="list">
+                        <!-- Member template -->
+                        <article class="member" role="listitem">
+                            <div class="avatar"><img src="{{ url_for('static', filename='images/team/salma.jpg') }}"
+                                    alt="Salma Hamraoui"
+                                    onerror="this.style.display='none';this.parentNode.textContent='SH'" /></div>
+                            <div class="meta">
+                                <h3>Salma Hamraoui</h3>
+                                <p>Storyteller — UX, content & outreach</p>
+                            </div>
+                        </article>
+                        <article class="member" role="listitem">
+                            <div class="avatar"><img src="{{ url_for('static', filename='images/team/taha.jpg') }}"
+                                    alt="Taha Taidi Laamiri"
+                                    onerror="this.style.display='none';this.parentNode.textContent='TT'" /></div>
+                            <div class="meta">
+                                <h3>Taha Taidi Laamiri</h3>
+                                <p>Team owner — project coordination & ops</p>
+                            </div>
+                        </article>
+                        <article class="member" role="listitem">
+                            <div class="avatar"><img src="{{ url_for('static', filename='images/team/salman.jpg') }}"
+                                    alt="Salman Derdeb"
+                                    onerror="this.style.display='none';this.parentNode.textContent='SD'" /></div>
+                            <div class="meta">
+                                <h3>Salman Derdeb</h3>
+                                <p>Developer — backend & data</p>
+                            </div>
+                        </article>
+                        <article class="member" role="listitem">
+                            <div class="avatar"><img src="{{ url_for('static', filename='images/team/rania.jpg') }}"
+                                    alt="Rania Elhaddaoui"
+                                    onerror="this.style.display='none';this.parentNode.textContent='RE'" /></div>
+                            <div class="meta">
+                                <h3>Rania Elhaddaoui</h3>
+                                <p>3D Artist & visuals</p>
+                            </div>
+                        </article>
+                        <article class="member" role="listitem">
+                            <div class="avatar"><img src="{{ url_for('static', filename='images/team/mourtada.jpg') }}"
+                                    alt="Mourtada Taidi Laamiri"
+                                    onerror="this.style.display='none';this.parentNode.textContent='MT'" /></div>
+                            <div class="meta">
+                                <h3>Mourtada Taidi Laamiri</h3>
+                                <p>Graphic designer & branding</p>
+                            </div>
+                        </article>
+                        <article class="member" role="listitem">
+                            <div class="avatar"><img
+                                    src="{{ url_for('static', filename='images/team/medyassine.jpg') }}"
+                                    alt="Med Yassine Behammou"
+                                    onerror="this.style.display='none';this.parentNode.textContent='MY'" /></div>
+                            <div class="meta">
+                                <h3>Med Yassine Behammou</h3>
+                                <p>Developer — frontend & visualizations</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Stats aside -->
+                <aside class="card stats" aria-labelledby="stats-title">
+                    <h3 id="stats-title">Project stats</h3>
+                    <div class="stat">
+                        <div class="num">608</div>
+                        <div class="label">Articles indexed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">AI</div>
+                        <div class="label">Summarization (DistilBART)</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">KG</div>
+                        <div class="label">Interactive knowledge graph</div>
+                    </div>
+                    <a class="btn" href="/" role="button">Open app</a>
+                </aside>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer card" role="contentinfo">
+            <div>Built with ❤️ — BEXRP (Biology Experiment Research Portal)</div>
+            <div style="color: var(--muted); font-size: 0.85rem">License: MIT — Data source: PMC article metadata</div>
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/aboutus.js') }}"></script>
+</body>
+
+</html>

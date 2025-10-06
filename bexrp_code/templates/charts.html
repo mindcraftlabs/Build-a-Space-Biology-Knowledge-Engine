@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Articles Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <a href="/" target="_self" class="home-btn">
+        <i class="fas fa-home"></i>
+    </a>
+    <section class="hero">
+        <h1 id="title" class="hero" style="cursor: pointer;" title="Return to Homepage">
+            Articles Analytics Dashboard
+        </h1>
+    </section>
+
+
+    <div class="container">
+        <div class="results-container">
+            <!-- Articles Released per Year -->
+            <div class="chart-card">
+                <h2>Articles Released per Year</h2>
+                <div class="controls">
+                    <label for="chartType" class="grid-label">Chart Type:</label>
+                    <div class="grid-select">
+                        <select id="chartType">
+                            <option value="bar" selected>Bar</option>
+                            <option value="line">Line</option>
+                            <option value="scatter">Scatter</option>
+                            <option value="radar">Radar</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-area">
+                    <canvas id="articlesChart" aria-label="Articles per year" role="img"></canvas>
+                </div>
+                <p class="chart-note">Click on any bar/pie segment to see the articles for that year.</p>
+                <br>
+                <button id="downloadArticlesChart" class="download-btn">
+                    <i class="fas fa-download"></i> Download Articles Chart as PNG
+                </button>
+            </div>
+
+            <!-- Top 20 Categories -->
+            <div class="chart-card">
+                <h2>Top 20 Categories of Articles</h2>
+                <div class="controls">
+                    <label for="chartType2" class="grid-label">Chart Type:</label>
+                    <div class="grid-select">
+                        <select id="chartType2">
+                            <option value="bar" selected>Bar</option>
+                            <option value="line">Line</option>
+                            <option value="pie">Pie</option>
+                            <option value="doughnut">Doughnut</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-area">
+                    <canvas id="categoryChart" aria-label="Top 20 categories of articles" role="img"></canvas>
+                </div>
+                <p class="chart-note">Click on any bar/pie segment to see the articles in that category.</p>
+                <br>
+                <button id="downloadCategoryChart" class="download-btn">
+                    <i class="fas fa-download"></i> Download Category Chart as PNG
+                </button>
+            </div>
+
+            <!-- Top 15 Authors -->
+            <div class="chart-card">
+                <h2>Top 15 Authors by Articles</h2>
+                <div class="controls">
+                    <label for="chartType3" class="grid-label">Chart Type:</label>
+                    <div class="grid-select">
+                        <select id="chartType3">
+                            <option value="horizontal" selected>Horizontal Bar</option>
+                            <option value="bar">Bar</option>
+                            <option value="pie">Pie</option>
+                            <option value="doughnut">Doughnut</option>
+                            <option value="line">Line</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-area">
+                    <canvas id="authorChart" aria-label="Top 15 authors by articles" role="img"></canvas>
+                </div>
+                <p class="chart-note">Click on any bar/pie segment to see the articles by that author.</p>
+                <br>
+                <button id="downloadAuthorChart" class="download-btn">
+                    <i class="fas fa-download"></i> Download Author Chart as PNG
+                </button>
+            </div>
+            <!-- Top 15 Publishers -->
+            <div class="chart-card">
+                <h2>Top 15 Publishers by Articles</h2>
+                <div class="controls">
+                    <label for="chartType4" class="grid-label">Chart Type:</label>
+                    <div class="grid-select">
+                        <select id="chartType4">
+                            <option value="bar">Bar</option>
+                            <option value="horizontal">Horizontal Bar</option>
+                            <option value="pie" selected>Pie</option>
+                            <option value="doughnut">Doughnut</option>
+                            <option value="line">Line</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-area">
+                    <canvas id="publisherChart" aria-label="Top 15 publishers" role="img"></canvas>
+                </div>
+                <p class="chart-note">Click on any bar/pie segment to see the articles by that publisher.</p>
+                <br>
+                <button id="downloadPublisherChart" class="download-btn">
+                    <i class="fas fa-download"></i> Download Publisher Chart as PNG
+                </button>
+            </div>
+
+            <!-- Articles Released per Year (unchanged) -->
+        </div>
+    </div>
+
+    <div class="summary-modal" id="summaryModal">
+        <div class="summary-modal-content" id="summaryContent">
+            <h2 id="modalTitle">Articles</h2>
+            <div id="modalArticles" class="modal-articles"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+
+</body>
+<footer>
+    <p>© Mindcraft - NASA SPACE APPS CHALLENGE 2025 BEXRP Project</p>
+</footer>
+
+</html>

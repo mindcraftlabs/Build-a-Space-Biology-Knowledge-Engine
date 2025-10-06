@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Knowledge Graph Explorer — Transparent Layout</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <a href="/" target="_self" class="home-btn">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <div id="toast" class="toast"></div>
+
+  <div class="hero">
+    <h1>Knowledge Graph Explorer</h1>
+  </div>
+
+  <main class="kg_container" role="main" aria-label="Knowledge graph container">
+    <section class="top-grid">
+      <aside class="authors-panel" aria-label="Authors panel">
+        <div class="panel-title">Authors</div>
+        <input id="author-filter" type="text" placeholder="Filter authors..." aria-label="Filter authors" />
+        <div id="author-list" role="list" aria-label="Author list">
+          {% for a in authors %}
+            <div class="author-item" role="listitem" data-author="{{ a }}" tabindex="0">{{ a }}</div>
+          {% endfor %}
+        </div>
+      </aside>
+
+      <aside class="keywords-panel" aria-label="Keywords panel">
+        <div class="panel-title">Keywords</div>
+        <input id="keyword-filter" type="text" placeholder="Filter keywords..." aria-label="Filter keywords" />
+        <div id="keyword-list" role="list" aria-label="Keyword list">
+          {% for kw in keywords %}
+            <div class="keyword-item" role="listitem" data-keyword="{{ kw }}" tabindex="0">{{ kw }}</div>
+          {% endfor %}
+        </div>
+      </aside>
+
+      <aside class="articles-panel" aria-label="Articles panel">
+        <div class="panel-title">Articles</div>
+        <input id="article-filter" type="text" placeholder="Filter articles..." aria-label="Filter articles" />
+        <div id="article-list">
+          {% for t in all_titles %}
+            <div class="article-item" 
+                 data-article-id="{{ t.id }}" 
+                 data-article-title="{{ t.title | e }}" 
+                 tabindex="0">
+              {{ t.title }}
+            </div>
+          {% endfor %}
+        </div>
+      </aside>
+    </section>
+
+    <section class="kg-container" aria-label="Graph area">
+      <div class="kg-container-header">
+        <h2>Knowledge Graph</h2>
+        <div class="chart-buttons">
+          <button id="btn-clear" class="btn">Clear</button>
+          <button id="btn-zoom-in" class="btn" style="padding:8px;border-radius:8px">Zoom +</button>
+          <button id="btn-zoom-out" class="btn" style="padding:8px;border-radius:8px">Zoom −</button>
+          <button id="btn-fit" class="btn" style="padding:8px;border-radius:8px">Fit</button>
+        </div>
+      </div>
+      <div class="kg-area" role="region" aria-label="Graph">
+        <div id="graph-node"></div>
+      </div>
+      <p class="chart-note">
+        Click a node to expand. Double-click article nodes to open the article. Details appear below when you click an article.
+      </p>
+    </section>
+  </main>
+
+  <section id="detail-window" class="detail-window" aria-hidden="true">
+    <button id="detail-close" class="detail-close" aria-label="Close details">
+      <i class="fa fa-times"></i>
+    </button>
+    <div class="detail-header">
+      <h3 id="detail-title">Article title</h3>
+    </div>
+    <div class="detail-body">
+      <div class="detail-meta-block" id="detail-meta-block"></div>
+      <div class="detail-image-wrap"></div>
+    </div>
+    <div class="detail-footer">
+      <a id="detail-link" class="detail-ai-btn" href="#" target="_blank" rel="noopener">
+        <i class="fa fa-external-link-alt"></i> Open Article
+      </a>
+      <button id="detail-ai-btn" class="detail-ai-btn" aria-pressed="false" aria-label="Request AI summary">
+        <i class="fa fa-robot"></i> Request AI Summary
+      </button>
+    </div>
+    <div id="detail-ai-summary" class="detail-ai-summary" aria-live="polite" style="display:none; margin-top:1rem;"></div>
+  </section>
+
+  <script src="{{ url_for('static', filename='js/knowledgegraph.js') }}" defer></script>
+
+  <footer>
+    <p>© Mindcraft - NASA SPACE APPS CHALLENGE 2025 BEXRP Project</p>
+  </footer>
+</body>
+</html>
+

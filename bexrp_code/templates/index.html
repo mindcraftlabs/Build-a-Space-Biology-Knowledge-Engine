@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{TITLE}}</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}" />
+</head>
+
+<body>
+    <div id="toast" class="toast"></div>
+
+    <div class="container">
+        <section class="hero">
+            <h1 id="title" class="hero" style="cursor: pointer" title="Return to Homepage">
+                {{TITLE}}
+            </h1>
+        </section>
+
+        <section class="search-container">
+            <form class="search-box">
+                <div class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" name="q" placeholder="Search for articles by title..." />
+                </div>
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-rocket"></i> Search
+                </button>
+            </form>
+
+            <div class="search-actions">
+                <button class="action-btn" id="filter-btn">
+                    <i class="fas fa-sliders-h"></i> Advanced Filters
+                    <div class="filter-count">0</div>
+                </button>
+
+                <button class="action-btn" id="kg-btn">
+                    <i class="fas fa-sitemap"></i> Knowledge Graphs
+                </button>
+
+                <button class="action-btn" id="analytics-btn">
+                    <i class="fas fa-chart-line"></i>
+                    Analytics
+                </button>
+                <button class="action-btn" id="recent-btn">
+                    <i class="fas fa-history"></i> Recent
+                </button>
+                <button class="action-btn" id="saved-btn">
+                    <i class="fas fa-star"></i> Saved
+                </button>
+            </div>
+            <div class="filter-panel" id="filterPanel">
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-tags"></i> Keywords</h3>
+                        <input type="text" class="filter-search" placeholder="Search keywords..."
+                            oninput="filterOptions(this)" />
+                    </div>
+                    <div class="filter-options">
+                        {% for kw in keywords %}
+                        <div class="filter-option">
+                            <input type="checkbox" id="kw{{ loop.index }}" value="{{ kw }}" />
+                            <label for="kw{{ loop.index }}">{{ kw }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-user"></i> Authors</h3>
+                        <input type="text" class="filter-search" placeholder="Search authors..."
+                            oninput="filterOptions(this)" />
+                    </div>
+                    <div class="filter-options">
+                        {% for author in authors %}
+                        <div class="filter-option">
+                            <input type="checkbox" id="auth{{ loop.index }}" value="{{ author }}" />
+                            <label for="auth{{ loop.index }}">{{ author }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-calendar-alt"></i> Pub Year</h3>
+                        <input type="text" class="filter-search" placeholder="Search authors..."
+                            oninput="filterOptions(this)" />
+                    </div>
+
+                    <div class="filter-options">
+                        {% for year in years %}
+                        <div class="filter-option">
+                            <input type="checkbox" id="year{{ loop.index }}" value="{{ year }}" />
+                            <label for="year{{ loop.index }}">{{ year }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-building"></i> Publisher</h3>
+                        <input type="text" class="filter-search" placeholder="Search publishers..."
+                            oninput="filterOptions(this)" />
+                    </div>
+                    <div class="filter-options">
+                        {% for publisher in publishers %}
+                        <div class="filter-option">
+                            <input type="checkbox" id="pub{{ loop.index }}" value="{{ publisher }}" />
+                            <label for="pub{{ loop.index }}">{{ publisher }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button type="button" id="clear-filters-btn" class="clear-filters-btn">
+                    <i class="fas fa-times-circle"></i> Clear All Filters
+                </button>
+            </div>
+        </section>
+
+        <div id="recent-modal" class="modal" style="display: none; max-width: 500px">
+            <h2>Recent Articles</h2>
+            <ul id="recent-list" style="margin-top: 1rem"></ul>
+        </div>
+
+        <div id="saved-modal" class="modal" style="display: none; max-width: 500px">
+            <h2>Saved Articles</h2>
+            <ul id="saved-list" style="margin-top: 1rem"></ul>
+        </div>
+        <section class="stats-container">
+            <div class="stats-card">
+                <div class="stats-icon"><i class="fas fa-users"></i></div>
+                <div class="stats-info">
+                    <div class="stats-number">{{ total_authors }}</div>
+                    <div class="stats-label">Authors</div>
+                </div>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-icon"><i class="fas fa-book"></i></div>
+                <div class="stats-info">
+                    <div class="stats-number">{{ total_articles }}</div>
+                    <div class="stats-label">Articles</div>
+                </div>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-icon"><i class="fas fa-tags"></i></div>
+                <div class="stats-info">
+                    <div class="stats-number">{{ total_keywords }}</div>
+                    <div class="stats-label">Keywords</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-container">
+            <div class="results-header">
+                <div class="results-count" id="results-count">Showing 0 results</div>
+                <div class="sort-select">
+                    <label for="sort-date" class="sort-label">Sort by:</label>
+                    <select id="sort-date">
+                        <option value="best" selected>Relevent</option>
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                </div>
+
+                <div class="grid-select">
+                    <label for="grid-cols" class="grid-label">Grid:</label>
+                    <select id="grid-cols">
+                        <option value="1">1 per row</option>
+                        <option value="2">2 per row</option>
+                        <option value="3" selected>3 per row</option>
+                        <option value="4">4 per row</option>
+                    </select>
+                </div>
+            </div>
+            <div class="results-grid grid-cols-3" id="results-grid"></div>
+        </section>
+
+        <div id="summary-modal" class="modal" style="display: none; max-width: 700px">
+            <div class="modal-content">
+                <div id="modal-image-gallery" class="modal-gallery" style="display: none">
+                    <button id="modal-prev" class="carousel-btn prev" aria-label="Previous image">
+                        &lt;
+                    </button>
+                    <img id="modal-image-main" src="" alt="Article Image" class="modal-img" />
+                    <button id="modal-next" class="carousel-btn next" aria-label="Next image">
+                        &gt;
+                    </button>
+                    <div id="modal-carousel-counter" class="carousel-counter" aria-hidden="true"></div>
+                </div>
+
+                <h2 id="modal-title" class="modal-title"></h2>
+                <div>
+                    <span class="modal-label">Authors:</span>
+                    <span id="modal-authors" class="modal-value"></span>
+                </div>
+                <div>
+                    <span class="modal-label">PCMID:</span>
+                    <span id="modal-pcmid" class="modal-value"></span>
+                </div>
+                <div>
+                    <span class="modal-label">Publication Date:</span>
+                    <span id="modal-date" class="modal-value"></span>
+                </div>
+                <div>
+                    <span class="modal-label">Keywords:</span>
+                    <span id="modal-domains" class="modal-value"></span>
+                </div>
+                <div>
+                    <br />
+                    <span class="modal-label">AI Summary:</span>
+                    <span id="modal-summary" class="modal-value"></span>
+                </div>
+                <br />
+                <div class="modal-actions">
+                    <div class="modal-actions-left">
+                        <a id="read-full-article-btn" class="article-action-btn article-action-btn--outline" href="#"
+                            target="_blank" rel="noopener noreferrer" aria-label="Open full article in new tab">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Read full article</span>
+                        </a>
+
+                        <a id="download-pdf-btn" class="article-action-btn article-action-btn--outline" href="#"
+                            target="_blank" rel="noopener noreferrer" aria-label="Download PDF" style="display: none">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download PDF</span>
+                        </a>
+                        <a id="cite-btn" class="article-action-btn article-action-btn--outline" href="#" target="_blank"
+                            rel="noopener noreferrer" aria-label="Cite Article">
+                            <i class="fas fa-quote-right"></i>
+                            <span>Cite</span>
+                        </a>
+                    </div>
+
+                    <a id="modal-save-btn" class="article-action-btn article-action-btn--primary" href="#"
+                        aria-label="Save article">
+                        <i class="fas fa-star"></i>
+                        <span>Save</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-backdrop" class="modal-backdrop" style="display: none" onclick="closeAllModals()"></div>
+
+        <footer>
+            <p>© Mindcraft - NASA SPACE APPS CHALLENGE 2025 BEXRP Project</p>
+        </footer>
+    </div>
+    <div id="image-lightbox" aria-hidden="true" tabindex="-1">
+        <button class="lb-close" aria-label="Close image">&times;</button>
+        <img class="lb-img" src="" alt="Expanded image" />
+    </div>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+</html>
