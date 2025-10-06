@@ -9,15 +9,8 @@
 5. Endpoints and UI Routes  
 6. Key Files and Directory Layout  
 7. Configuration and Environment  
-8. Installation & Dependencies  
-9. Development Workflow  
-10. Testing  
-11. Deployment  
-12. Security Considerations  
-13. Troubleshooting & FAQs  
-14. Contribution Guide  
-15. License  
-16. Appendix: Glossary, Credits, and References  
+8. Future enhancements
+9. License  
 
 ---
 
