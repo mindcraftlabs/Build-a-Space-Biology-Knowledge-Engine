@@ -68,7 +68,7 @@ The front-end dashboard provides **interactivity and clarity**:
 - **Research efficiency**: Helps researchers, educators, and mission planners quickly triage relevant studies.  
 
 ---
-
+Check out the [BEXRP code documentation](https://github.com/mindcraftlabs/Build-a-Space-Biology-Knowledge-Engine/blob/main/bexrp_code/readme.md) for more details.
 ## 📂 NASA Data
 All data originates from **NASA’s open-access bioscience publications**.
 "[NASA Data](https://github.com/jgalazka/SB_publications/tree/main)"
