@@ -177,5 +177,4 @@ fetch("/api/articles?q=cancer&limit=25")
 
 
 ## 8. License
-
-Add license here (MIT/Apache-2.0).  
+MIT.
