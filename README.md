@@ -3,9 +3,9 @@
 
 # 🌍 **Visit Our Website**
 
-## 🔗 [https://bexrp.mindcraftdev.com/](https://bexrp.mindcraftdev.com/)
+## 🔗 [https://bexrp.mindcraftdev.com/](http://44.208.67.215:1080/)
 
-<a href="https://bexrp.mindcraftdev.com/" target="_blank">
+<a href="http://44.208.67.215:1080/" target="_blank">
   <img src="https://img.shields.io/badge/Visit-BEXRP%20Portal-brightgreen?style=for-the-badge&logo=google-chrome" alt="Visit BEXRP Portal">
 </a>
 
